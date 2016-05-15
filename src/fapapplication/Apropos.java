@@ -61,13 +61,13 @@ public class Apropos extends JDialog implements ActionListener {
         partDroite.add (lblDescription);
         partDroite.add (lblCopyright);
         partDroite.add (lblVersion);
-        JPanel panHaut = new JPanel(new FlowLayout(FlowLayout.CENTER, 20, 0));
-        panHaut.add (lblIcone);
-        panHaut.add (partDroite);
+        JPanel partHaut = new JPanel(new FlowLayout(FlowLayout.CENTER, 20, 0));
+        partHaut.add (lblIcone);
+        partHaut.add (partDroite);
         JPanel panBas = new JPanel (); 
         cmdOK.addActionListener(this); 
         panBas.add(cmdOK);
-        zoneWhoisit.add (panHaut, BorderLayout.NORTH);
+        zoneWhoisit.add (partHaut, BorderLayout.NORTH);
         zoneWhoisit.add (panBas, BorderLayout.SOUTH);
     }
     
