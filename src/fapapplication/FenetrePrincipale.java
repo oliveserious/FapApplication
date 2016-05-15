@@ -340,33 +340,6 @@ public class FenetrePrincipale extends JFrame {
         affichagePrim.add(toolbarPrim, BorderLayout.NORTH);
         affichagePrim.add(affichageSec1, BorderLayout.CENTER);
         affichagePrim.add(statusBar, BorderLayout.SOUTH);
-        
-        
-//        setContentPane(desktop);
-//        desktop.setLayout(new BorderLayout(-50, -50));
-//        desktop.setBackground(Color.cyan);
-//        
-        
-        
-//        JPanel milieu = new JPanel();{
-//            milieu.setBackground(Color.cyan);
-//        }
-//        zoneClient.add(milieu, BorderLayout.CENTER);
-        
-        
-        
-        
-//        JDesktopPane desktop = new JDesktopPane();
-//        setContentPane(desktop);
-//        desktop.setBackground(Color.cyan);
-//        desktop.setDragMode(JDesktopPane.OUTLINE_DRAG_MODE);
-//        //create first "window"
-//        MyInternalFrame frametest = new MyInternalFrame();
-//        frametest.setVisible(true);
-//        desktop.add(frametest);
-//        try {
-//            frametest.setSelected(true);
-//        }catch (java.beans.PropertyVetoException e) {}
     }
     
 }
