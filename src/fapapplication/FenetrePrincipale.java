@@ -313,21 +313,39 @@ public class FenetrePrincipale extends JFrame {
         JDesktopPane affichageSec1 = new JDesktopPane();
         affichageSec1.setDragMode(JDesktopPane.OUTLINE_DRAG_MODE);
         affichageSec1.setBackground(Color.darkGray);
+        
         //create first "window"
-        FramePanneau1 Pan1 = new FramePanneau1();
+        frmStage Pan1 = new frmStage();
         Pan1.setVisible(true);
         affichageSec1.add(Pan1);
         try {
             Pan1.setSelected(true);
         }catch (java.beans.PropertyVetoException e) {} 
-        //create first "window"
-        FramePanneau2 Pan2 = new FramePanneau2();
-        Pan2.setVisible(false);
+ 
+        //create second "window"
+        frmEnt Pan2 = new frmEnt();
+        Pan2.setVisible(true);
         affichageSec1.add(Pan2);
         try {
             Pan2.setSelected(true);
-        }catch (java.beans.PropertyVetoException e) {}       
-    
+        }catch (java.beans.PropertyVetoException e) {} 
+        
+        //create third "window"
+        frmSession Pan3 = new frmSession();
+        Pan3.setVisible(true);
+        affichageSec1.add(Pan3);
+        try {
+            Pan3.setSelected(true);
+        }catch (java.beans.PropertyVetoException e) {}
+
+        //create fourth "window"
+        frmType Pan4 = new frmType();
+        Pan4.setVisible(true);
+        affichageSec1.add(Pan4);
+        try {
+            Pan4.setSelected(true);
+        }catch (java.beans.PropertyVetoException e) {}        
+        
         //toolBar 
         JToolBar toolbarPrim = new JToolBar();
         boutonAide.addActionListener(new MenuActionListener());

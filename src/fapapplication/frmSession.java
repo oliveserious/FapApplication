@@ -6,16 +6,21 @@
 package fapapplication;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
+import javax.swing.JDesktopPane;
 import javax.swing.JInternalFrame;
 import javax.swing.JLabel;
 import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPopupMenu;
 import javax.swing.JScrollPane;
@@ -23,24 +28,42 @@ import javax.swing.JTable;
 import javax.swing.JTextArea;
  
 
-public class FramePanneau1 extends JInternalFrame {
+public class frmSession extends JInternalFrame {
 
     
     private JButton btnNouveau = new JButton("Nouveau");
     private JButton btnQuitter = new JButton("Quitter");
 
     
-    public FramePanneau1() {
+    public frmSession() {
   
-        super("Gestion des stages", 
+        super("Gestion des sessions", 
             true, //resizable
             true, //closable
             true, //maximizable
             true);//iconifiable
+
             setSize(600,400);      
         
             initControls();
+
     }
+    
+    private void btnNouveau_click() {
+
+    }
+   
+    
+    class MenuActionListener implements ActionListener {
+        
+        //A listener with actions
+        public void actionPerformed(ActionEvent e) {
+            Object source = e.getSource();
+      
+            if (source == btnNouveau) btnNouveau_click();
+          
+        }
+    } 
  
     private void initControls() {
         
@@ -48,20 +71,27 @@ public class FramePanneau1 extends JInternalFrame {
         zoneTableau.setLayout(new BorderLayout(10,10));
         zoneTableau.setBorder(BorderFactory.createEmptyBorder(5,5,5,5));
         
+
         
         final Object rowData[][] = { { "1", "one", "I" }, { "2", "two", "II" }, { "3", "three", "III" } };
-        final String columnNames[] = { "#", "English", "Roman" };
+        final String columnNames[] = { "Session", "Date début", "Date fin" };
         
         final JTable table = new JTable(rowData, columnNames);
         JScrollPane scrollPane = new JScrollPane(table);
         
         JPanel panBouton = new JPanel (new GridLayout(2,1,10,10));
+        btnNouveau.addActionListener(new frmSession.MenuActionListener());
         panBouton.add (btnNouveau);
+        btnQuitter.addActionListener(new frmSession.MenuActionListener());
         panBouton.add (btnQuitter);
         
         zoneTableau.add (scrollPane, BorderLayout.CENTER);
         zoneTableau.add (panBouton, BorderLayout.SOUTH);
     
     }
+    
+
   
 }
+
+
