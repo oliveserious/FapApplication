@@ -57,13 +57,13 @@ public class Apropos extends JDialog implements ActionListener {
     {
         JPanel zoneWhoisit = (JPanel) this.getContentPane();
         zoneWhoisit.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
-        JPanel panDroite = new JPanel (new GridLayout(3,1,10,10));
-        panDroite.add (lblDescription);
-        panDroite.add (lblCopyright);
-        panDroite.add (lblVersion);
+        JPanel partDroite = new JPanel (new GridLayout(3,1,10,10));
+        partDroite.add (lblDescription);
+        partDroite.add (lblCopyright);
+        partDroite.add (lblVersion);
         JPanel panHaut = new JPanel(new FlowLayout(FlowLayout.CENTER, 20, 0));
         panHaut.add (lblIcone);
-        panHaut.add (panDroite);
+        panHaut.add (partDroite);
         JPanel panBas = new JPanel (); 
         cmdOK.addActionListener(this); 
         panBas.add(cmdOK);
