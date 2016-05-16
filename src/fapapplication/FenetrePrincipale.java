@@ -183,10 +183,8 @@ public class FenetrePrincipale extends JFrame {
         }
     }
     private void menuDonneesStages_click() {
-//        frmStage framefrmStage = new frmStage();
-//        framefrmStage.setVisible(true);
-       
-        
+
+      
         
     }
     private void menuDonneesEntreprises_click() {
@@ -225,7 +223,8 @@ public class FenetrePrincipale extends JFrame {
         
     }
     private void menuAideSommaire_click() {
-        
+        frmSommaire framefrmSommaire = new frmSommaire();
+        framefrmSommaire.setVisible(true);       
     }
     private void menuAideSiteweb_click() {
         
@@ -237,7 +236,7 @@ public class FenetrePrincipale extends JFrame {
                             + "Really,  I've no idea.");
         dlg.setCopyright("LoliveSerious (c) 2016");
         dlg.setVersion("Version 1.0");
-        dlg.setIcone("E:\\Documents\\NetBeansProjects\\FapApplication\\src\\img\\hatswtf.jpg");
+        dlg.setIcone("E:\\Documents\\NetBeansProjects\\FapApplication\\src\\img\\giphy.gif");
         dlg.show();
     }  
 
@@ -316,7 +315,8 @@ public class FenetrePrincipale extends JFrame {
         
         //create first "window"
         frmStage Pan1 = new frmStage();
-        Pan1.setVisible(true);
+        Pan1.setVisible(false);
+
         affichageSec1.add(Pan1);
         try {
             Pan1.setSelected(true);
@@ -344,7 +344,23 @@ public class FenetrePrincipale extends JFrame {
         affichageSec1.add(Pan4);
         try {
             Pan4.setSelected(true);
-        }catch (java.beans.PropertyVetoException e) {}        
+        }catch (java.beans.PropertyVetoException e) {} 
+        
+        //create five "window"
+        frmUpdStage Pan5 = new frmUpdStage();
+        Pan5.setVisible(true);
+        affichageSec1.add(Pan5);
+        try {
+            Pan5.setSelected(true);
+        }catch (java.beans.PropertyVetoException e) {}
+        
+        //create five "window"
+        frmUpdEnt Pan6 = new frmUpdEnt();
+        Pan6.setVisible(true);
+        affichageSec1.add(Pan6);
+        try {
+            Pan5.setSelected(true);
+        }catch (java.beans.PropertyVetoException e) {} 
         
         //toolBar 
         JToolBar toolbarPrim = new JToolBar();
